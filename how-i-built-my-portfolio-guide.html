@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>How I Built My Portfolio: A Step-by-Step Guide | Doziecodes</title>
+    <meta name="description" content="A behind-the-scenes look at the process, tools, and technologies used to build a modern, responsive developer portfolio from scratch using HTML, Tailwind CSS, and JavaScript.">
+    <meta name="keywords" content="developer portfolio, web development guide, HTML, Tailwind CSS, JavaScript, build a portfolio, frontend development, AOS scroll animation">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://doziecodes.netlify.app/how-i-built-my-portfolio-guide.html">
+    <meta property="og:title" content="How I Built My Portfolio: A Step-by-Step Guide | Doziecodes">
+    <meta property="og:description" content="A behind-the-scenes look at the tools and technologies used to build a modern developer portfolio with HTML, Tailwind CSS, and JavaScript.">
+    <meta property="og:image" content="https://doziecodes.netlify.app/img/portfolio-build-banner.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://doziecodes.netlify.app/how-i-built-my-portfolio-guide.html">
+    <meta property="twitter:title" content="How I Built My Portfolio: A Step-by-Step Guide | Doziecodes">
+    <meta property="twitter:description" content="A behind-the-scenes look at the tools and technologies used to build a modern developer portfolio with HTML, Tailwind CSS, and JavaScript.">
+    <meta property="twitter:image" content="https://doziecodes.netlify.app/img/portfolio-build-banner.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "How I Built My Portfolio: A Step-by-Step Guide",
+      "image": "https://doziecodes.netlify.app/img/portfolio-build-banner.png",  
+      "author": {
+        "@type": "Person",
+        "name": "Augustine Chidozie"
+      },  
+      "publisher": {
+        "@type": "Organization",
+        "name": "Doziecodes"
+      },
+      "datePublished": "2025-08-22"
+    }
+    </script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fdfdfd;
+            color: #333;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #ffb400, #ff7e5f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        .prose {
+            color: #374151;
+        }
+        .prose h1, .prose h2, .prose h3 {
+            color: #111827;
+        }
+        .prose p, .prose ul, .prose blockquote, .prose h2, .prose h3 {
+            margin-bottom: 1.25em;
+        }
+        .prose h2, .prose h3 {
+            margin-top: 2em;
+        }
+        .prose a {
+            color: #f59e0b;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .prose a:hover {
+            text-decoration: underline;
+        }
+        .prose strong {
+            color: #111827;
+        }
+        .prose blockquote {
+            border-left-color: #ffb400;
+            color: #6b7280;
+        }
+        .prose code {
+            color: #ec4899;
+            background-color: #f3f4f6;
+            padding: 0.2em 0.4em;
+            border-radius: 0.25rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Simple Header -->
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-200">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-gray-900 group">
+                <span class="font-semibold group-hover:text-custom-yellow transition-colors duration-300">dozie</span><span class="gradient-text">codes.</span>
+            </a>
+            <a href="index.html#contact" class="bg-yellow-500 text-gray-900 font-bold px-6 py-2 rounded-full hover:bg-yellow-600 transition-colors duration-300">Contact Me</a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-16">
+        <article class="prose prose-lg max-w-4xl mx-auto">
+            
+            <span class="text-sm text-gray-500">August 22, 2025</span>
+            <h1>How I Built My Portfolio: A Step-by-Step Guide</h1>
+            
+            <p class="lead">A developer's portfolio is more than just a resume—it's a living showcase of your skills, style, and process. I often get questions about how I built my own site, so I decided to pull back the curtain and share a step-by-step guide. My goal was to create something clean, professional, and interactive from scratch, using a modern tech stack.</p>
+
+            <img src="img/portt.png" alt="Screenshot of the portfolio hero section" class="rounded-lg my-8">
+
+            <h2>Step 1: Planning and Design</h2>
+            <p>Before writing a single line of code, I started with a clear plan. I was heavily inspired by my previous portfolio but wanted to give it a more modern, spacious, and animated feel. The main goals were:</p>
+            <ul>
+                <li><strong>A Single-Page Layout:</strong> For a smooth, uninterrupted user experience.</li>
+                <li><strong>A Clean Aesthetic:</strong> Using a dark mode default with a professional font (Poppins) and a striking yellow accent color.</li>
+                <li><strong>Interactivity:</strong> Incorporating animations and effects to make the site feel alive.</li>
+            </ul>
+            <p>I sketched out the layout of each section (Hero, Services, About, etc.) to establish a clear visual hierarchy before moving on to the code.</p>
+
+            <h2>Step 2: The Tech Stack - Simplicity and Power</h2>
+            <p>I chose a simple but powerful stack for this project. Since it's a static site, I didn't need a complex backend or a heavy framework. My core tools were:</p>
+            <ul>
+                <li><strong>HTML5:</strong> The foundation of the site, structured semantically.</li>
+                <li><strong>Tailwind CSS:</strong> For all the styling. Using a utility-first framework allowed me to build a completely custom design without writing custom CSS files. It's incredibly fast for prototyping and building responsive layouts.</li>
+                <li><strong>JavaScript:</strong> To power all the interactive elements like the theme toggle, testimonial slider, mobile menu, and animations.</li>
+            </ul>
+
+            <h2>Step 3: Building the Key Components</h2>
+            <p>With the plan and tools in place, I started building the site section by section. The hero section was crucial to get right, so I focused on the auto-typing effect to immediately grab attention. For the services and portfolio sections, I used a responsive grid layout that adapts perfectly from mobile to desktop screens.</p>
+            <blockquote>
+                For interactive elements like the FAQ accordion and testimonial slider, I wrote custom JavaScript functions. This keeps the site lightweight, avoiding the need to import heavy libraries for simple tasks.
+            </blockquote>
+            
+            <h2>Step 4: Adding Polish with Animations</h2>
+            <p>A static page can feel flat. To add a layer of professional polish, I used the <strong>Animate On Scroll (AOS)</strong> library. This lightweight library makes it incredibly easy to add subtle fade-in, slide-in, and zoom-in effects as the user scrolls down the page. I applied different animations and delays to various sections to create a dynamic and engaging experience.</p>
+
+            <h3>Conclusion: A Portfolio is a Journey</h3>
+            <p>Building your own portfolio is one of the most rewarding projects a developer can undertake. It's a chance to consolidate your skills, express your personal style, and create a powerful tool for your career. My approach focused on a clean design, a modern and efficient tech stack, and a focus on small details and animations to create a polished final product.</p>
+
+            <p>Have questions about the process? <a href="index.html#contact">Feel free to reach out!</a></p>
+
+        </article>
+    </main>
+
+    <!-- Simple Footer -->
+    <footer class="py-6 border-t border-gray-200">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p>&copy; 2024 Augustine. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

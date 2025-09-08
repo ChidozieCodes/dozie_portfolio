@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Augustine | Web & Mobile Developer in Port Harcourt, Lagos, Abuja</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Expert freelance web and mobile app developer based in Port Harcourt, Nigeria, serving clients in Lagos, Abuja, and beyond. Specializing in PHP, Laravel, React, and React Native.">
+    <meta name="keywords" content="freelance web developer Port Harcourt, mobile app developer Lagos, React developer Abuja, Laravel developer Nigeria, Augustine Chidozie, full stack developer Nigeria">
+    <meta name="author" content="Augustine Chidozie">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="NG-RI">
+    <meta name="geo.placename" content="Port Harcourt">
+    <meta name="geo.position" content="4.821385;6.920593">
+    <meta name="ICBM" content="4.821385, 6.920593">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://doziecodes.netlify.app/">
+    <meta property="og:title" content="Augustine Chidozie | Expert Web & Mobile Developer">
+    <meta property="og:description" content="Freelance developer in Port Harcourt, creating high-performance websites and mobile apps for clients in Lagos, Abuja, and across Nigeria.">
+    <meta property="og:image" content="https://doziecodes.netlify.app/img/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://doziecodes.netlify.app/">
+    <meta property="twitter:title" content="Augustine Chidozie | Expert Web & Mobile Developer">
+    <meta property="twitter:description" content="Freelance developer in Port Harcourt, creating high-performance websites and mobile apps for clients in Lagos, Abuja, and across Nigeria.">
+    <meta property="twitter:image" content="https://doziecodes.netlify.app/img/og-image.png">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Laila:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Devicon for Tech Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <!-- AOS Animate On Scroll Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header-bg backdrop-blur-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold dark:text-white group">
+                <span class="font-semibold group-hover:text-custom-yellow transition-colors duration-300">dozie</span><span class="gradient-text">codes.</span>
+            </a>
+            <div class="hidden md:flex space-x-8 items-center font-medium">
+                <a href="#about" class="hover:text-custom-yellow transition-colors duration-300">About</a>
+                <a href="#services" class="hover:text-custom-yellow transition-colors duration-300">Services</a>
+                <a href="#work" class="hover:text-custom-yellow transition-colors duration-300">Portfolio</a>
+                <a href="#testimonial" class="hover:text-custom-yellow transition-colors duration-300">Testimonial</a>
+                <a href="#blog" class="hover:text-custom-yellow transition-colors duration-300">Blog</a>
+                <a href="#faq" class="hover:text-custom-yellow transition-colors duration-300">FAQ</a>
+                <button id="theme-toggle" class="text-xl leading-none px-2 py-1 border border-transparent rounded-lg focus:outline-none">
+                    <i id="theme-toggle-dark-icon" class="fas fa-moon text-gray-700 dark:text-custom-yellow"></i>
+                    <svg id="theme-toggle-light-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-yellow hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                </button>
+            </div>
+             <button id="mobile-menu-button" class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu-overlay">
+            <button id="mobile-menu-close-button" class="close-btn">&times;</button>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#work">Portfolio</a>
+            <a href="#testimonial">Testimonial</a>
+            <a href="#blog">Blog</a>
+            <a href="#faq">FAQ</a>
+            <!-- Mobile Theme Toggle -->
+            <button id="theme-toggle-mobile" class="text-3xl mt-8">
+                <i id="theme-toggle-dark-icon-mobile" class="fas fa-moon text-white"></i>
+                <svg id="theme-toggle-light-icon-mobile" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 hidden text-custom-yellow" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6">
+
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center">
+            <div class="grid md:grid-cols-2 gap-12 items-center w-full">
+                <div class="text-center md:text-left">
+                    <p data-aos="fade-right" class="text-lg text-slate-500 dark:text-slate-400 mb-2">Hello, Welcome</p>
+                    <h1 data-aos="fade-right" data-aos-delay="200" class="text-4xl md:text-6xl font-extrabold dark:text-white leading-tight">I'm Augustine,<br>A <span class="inline-block min-h-[1.2em]"><span id="typing-text" class="gradient-text"></span><span class="typing-cursor"></span></span></h1>
+                    <p data-aos="fade-right" data-aos-delay="400" class="mt-6 max-w-xl mx-auto md:mx-0 text-lg">Merging speed, security, and stunning design to develop applications that users genuinely love. My passion is crafting exceptional digital experiences that are not only beautiful but also intuitive and highly functional.</p>
+                    <div data-aos="fade-up" data-aos-delay="600" class="mt-8 flex flex-col items-center md:items-start gap-8">
+                        <div class="flex items-center gap-4">
+                            <a href="#contact" class="gradient-button text-white font-bold px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105">Hire Me</a>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="font-medium text-slate-400">Chat Me</span>
+                            <div class="flex items-center gap-3">
+                                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-slate-700 text-slate-400 hover:bg-custom-yellow hover:text-gray-900 hover:border-custom-yellow transition-all duration-300"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-slate-700 text-slate-400 hover:bg-custom-yellow hover:text-gray-900 hover:border-custom-yellow transition-all duration-300"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-slate-700 text-slate-400 hover:bg-custom-yellow hover:text-gray-900 hover:border-custom-yellow transition-all duration-300"><i class="fab fa-whatsapp"></i></a>
+                                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-slate-700 text-slate-400 hover:bg-custom-yellow hover:text-gray-900 hover:border-custom-yellow transition-all duration-300"><i class="fab fa-x-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:flex justify-center items-center" data-aos="fade-left">
+                    <div class="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-custom-dark-card border-8 border-custom-dark-card shadow-2xl overflow-hidden animate-float">
+                         <img src="img/profile.jpg" alt="Augustine" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-24">
+            <div data-aos="fade-up">
+                <h2 class="text-4xl font-bold dark:text-white text-center mb-2">What I Do</h2>
+                <p class="text-center max-w-2xl mx-auto mb-12 text-slate-500 dark:text-slate-400">I am skilled and passionate about web & mobile development. Here are some of my areas of expertise.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div data-aos="fade-up" data-aos-delay="100" class="relative bg-custom-dark-card p-8 rounded-lg transform hover:-translate-y-2 transition-transform duration-300 shadow-lg gradient-border-pink">
+                    <i class="fas fa-laptop-code text-3xl text-pink-500 mb-4"></i>
+                    <h3 class="text-xl font-bold dark:text-white mb-2">Web Development</h3>
+                    <p>Creating responsive, high-performance websites from the ground up using modern technologies.</p>
+                </div>
+                 <!-- Service Card 2 -->
+                <div data-aos="fade-up" data-aos-delay="200" class="relative bg-custom-dark-card p-8 rounded-lg transform hover:-translate-y-2 transition-transform duration-300 shadow-lg gradient-border-green">
+                    <i class="fas fa-mobile-alt text-3xl text-green-500 mb-4"></i>
+                    <h3 class="text-xl font-bold dark:text-white mb-2">Mobile App Development</h3>
+                    <p>Building intuitive and user-friendly mobile applications for both iOS and Android platforms.</p>
+                </div>
+                <!-- Service Card 3 -->
+                <div data-aos="fade-up" data-aos-delay="300" class="relative bg-custom-dark-card p-8 rounded-lg transform hover:-translate-y-2 transition-transform duration-300 shadow-lg gradient-border-yellow">
+                   <i class="fas fa-palette text-3xl text-yellow-500 mb-4"></i>
+                    <h3 class="text-xl font-bold dark:text-white mb-2">UI/UX Design</h3>
+                    <p>Designing beautiful and functional user interfaces that provide an exceptional user experience.</p>
+                </div>
+                <!-- Service Card 4 -->
+                <div data-aos="fade-up" data-aos-delay="400" class="relative bg-custom-dark-card p-8 rounded-lg transform hover:-translate-y-2 transition-transform duration-300 shadow-lg gradient-border-purple">
+                   <i class="fas fa-bullhorn text-3xl text-purple-500 mb-4"></i>
+                    <h3 class="text-xl font-bold dark:text-white mb-2">SEO Marketing</h3>
+                    <p>Optimizing websites to rank higher on search engines and attract more organic traffic.</p>
+                </div>
+                 <!-- Service Card 5 -->
+                <div data-aos="fade-up" data-aos-delay="500" class="relative bg-custom-dark-card p-8 rounded-lg transform hover:-translate-y-2 transition-transform duration-300 shadow-lg gradient-border-red">
+                   <i class="fas fa-server text-3xl text-red-500 mb-4"></i>
+                    <h3 class="text-xl font-bold dark:text-white mb-2">Backend Development</h3>
+                    <p>Developing robust and scalable server-side logic and database structures for your applications.</p>
+                </div>
+                 <!-- Service Card 6 -->
+                <div data-aos="fade-up" data-aos-delay="600" class="relative bg-custom-dark-card p-8 rounded-lg transform hover:-translate-y-2 transition-transform duration-300 shadow-lg gradient-border-blue">
+                   <i class="fas fa-code text-3xl text-blue-500 mb-4"></i>
+                    <h3 class="text-xl font-bold dark:text-white mb-2">Web Design</h3>
+                    <p>Crafting visually appealing layouts and graphics that align with your brand identity.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-24">
+             <div data-aos="fade-up">
+                <h2 class="text-4xl font-bold dark:text-white text-center mb-2">About Me</h2>
+                <p class="text-center mb-12 text-custom-yellow font-medium">My Introduction</p>
+            </div>
+            <div class="grid md:grid-cols-5 gap-16 items-center">
+                <div class="md:col-span-2 relative" data-aos="fade-right">
+                    <div class="bg-custom-dark-card p-4 rounded-lg shadow-2xl">
+                        <img src="img/profile 2.jpg" alt="Augustine Chidozie" class="rounded-lg w-full object-cover">
+                    </div>
+                </div>
+                <div class="md:col-span-3 text-center md:text-left" data-aos="fade-left">
+                    <p class="text-slate-500 dark:text-slate-400 text-lg mb-8">
+                        Hello! I'm Augustine, a passionate software developer with a knack for creating dynamic, user-friendly web and mobile applications. My journey into development started back in 2018, and since then, I've been captivated by the power of code to bring ideas to life. Merging speed, security, and stunning design is at the heart of everything I build.
+                    </p>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 mb-8">
+                        <div class="text-center">
+                            <h3 class="text-4xl font-bold dark:text-white gradient-text">6+</h3>
+                            <p class="text-slate-500 dark:text-slate-400">Years Experience</p>
+                        </div>
+                        <div class="text-center">
+                            <h3 class="text-4xl font-bold dark:text-white gradient-text">100%</h3>
+                            <p class="text-slate-500 dark:text-slate-400">Success Rate</p>
+                        </div>
+                        <div class="text-center col-span-2 sm:col-span-1">
+                            <h3 class="text-4xl font-bold dark:text-white gradient-text">24+</h3>
+                            <p class="text-slate-500 dark:text-slate-400">Completed Projects</p>
+                        </div>
+                    </div>
+                    <a href="#" class="gradient-button text-white font-bold px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 inline-block">Download CV</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technologies & Tools Section -->
+        <section id="tech-stack" class="py-24">
+            <div data-aos="fade-up">
+                <h2 class="text-4xl font-bold dark:text-white text-center mb-2">Technologies & Tools</h2>
+                <p class="text-center mb-12 text-custom-yellow font-medium">My Tech Stack</p>
+            </div>
+            <div class="max-w-6xl mx-auto">
+                <h3 class="text-2xl font-bold dark:text-white mb-8 text-center" data-aos="fade-up">Technologies</h3>
+                <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4 mb-12">
+                    <div data-aos="zoom-in" data-aos-delay="100" class="bg-custom-dark-card rounded-lg p-4 flex flex-col items-center justify-center gap-2 transform hover:-translate-y-1 transition-transform duration-300 shadow-md"><i class="devicon-html5-plain colored text-5xl"></i><span class="font-semibold text-sm">HTML</span></div>
+                    <div data-aos="zoom-in" data-aos-delay="150" class="bg-custom-dark-card rounded-lg p-4 flex flex-col items-center justify-center gap-2 transform hover:-translate-y-1 transition-transform duration-300 shadow-md"><i class="devicon-css3-plain colored text-5xl"></i><span class="font-semibold text-sm">CSS</span></div>
+                    <div data-aos="zoom-in" data-aos-delay="200" class="bg-custom-dark-card rounded-lg p-4 flex flex-col items-center justify-center gap-2 transform hover:-translate-y-1 transition-transform duration-300 shadow-md"><i class="devicon-javascript-plain colored text-5xl"></i><span class="font-semibold text-sm">JavaScript</span></div>
+                    <div data-aos="zoom-in" data-aos-delay="250" class="bg-custom-dark-card rounded-lg p-4 flex flex-col items-center justify-center gap-2 transform hover:-translate-y-1 transition-transform duration-300 shadow-md"><i class="devicon-typescript-plain colored text-5xl"></i><span class="font-semibold text-sm">TypeScript</span></div>
+                    <div data-aos="zoom-in" data-aos-delay="300" class="bg-custom-dark-card rounded-lg p-4 flex flex-col items-center justify-center gap-2 transform hover:-translate-y-1 transition-transform duration-300 shadow-md"><i class="devicon-bootstrap-plain colored text-5xl"></i><span class="font-semibold text-sm">Bootstrap</span></div>
+                    <div data-aos="zoom-in" data-aos-delay="350" class="bg-custom-dark-card rounded-lg p-4 flex flex-col items-center justify-center gap-2 transform hover:-translate-y-1 transition-transform duration-300 shadow-md"><i class="devicon-tailwindcss-plain colored text-5xl"></i><span class="font-semibold text-sm">Tailwind CSS</span></div>
+                    <div data-aos="zoom-in" data-aos-delay="400" class="bg-custom-dark-card rounded-lg p-4 flex flex-col items-center justify-center gap-2 transform hover:-translate-y-1 transition-transform duration-300 shadow-md"><i class="devicon-react-original colored text-5xl"></i><span class="font-semibold text-sm">ReactJS</span></div>
+                    <div data-aos="zoom-in" data-aos-delay="450" class="bg-custom-dark-card rounded-lg p-4 flex flex-col items-center justify-center gap-2 transform hover:-translate-y-1 transition-transform duration-300 shadow-md"><i class="devicon-react-original colored text-5xl"></i><span class="font-semibold text-sm">React Native</span></div>
+                    <div data-aos="zoom-in" data-aos-delay="500" class="bg-custom-dark-card rounded-lg p-4 flex flex-col items-center justify-center gap-2 transform hover:-translate-y-1 transition-transform duration-300 shadow-md"><i class="devicon-php-plain colored text-5xl"></i><span class="font-semibold text-sm">PHP</span></div>
+                    <div data-aos="zoom-in" data-aos-delay="550" class="bg-custom-dark-card rounded-lg p-4 flex flex-col items-center justify-center gap-2 transform hover:-translate-y-1 transition-transform duration-300 shadow-md"><i class="devicon-laravel-plain colored text-5xl"></i><span class="font-semibold text-sm">Laravel</span></div>
+                    <div data-aos="zoom-in" data-aos-delay="600" class="bg-custom-dark-card rounded-lg p-4 flex flex-col items-center justify-center gap-2 transform hover:-translate-y-1 transition-transform duration-300 shadow-md"><i class="devicon-mysql-plain colored text-5xl"></i><span class="font-semibold text-sm">MySQL</span></div>
+                </div>
+                <h3 class="text-2xl font-bold dark:text-white mb-8 text-center" data-aos="fade-up">Tools</h3>
+                 <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4">
+                    <div data-aos="zoom-in" data-aos-delay="100" class="bg-custom-dark-card rounded-lg p-4 flex flex-col items-center justify-center gap-2 transform hover:-translate-y-1 transition-transform duration-300 shadow-md"><i class="devicon-git-plain colored text-5xl"></i><span class="font-semibold text-sm">Git</span></div>
+                    <div data-aos="zoom-in" data-aos-delay="150" class="bg-custom-dark-card rounded-lg p-4 flex flex-col items-center justify-center gap-2 transform hover:-translate-y-1 transition-transform duration-300 shadow-md"><i class="devicon-github-original dark:text-white text-5xl"></i><span class="font-semibold text-sm">GitHub</span></div>
+                    <div data-aos="zoom-in" data-aos-delay="200" class="bg-custom-dark-card rounded-lg p-4 flex flex-col items-center justify-center gap-2 transform hover:-translate-y-1 transition-transform duration-300 shadow-md"><i class="devicon-figma-plain colored text-5xl"></i><span class="font-semibold text-sm">Figma</span></div>
+                    <div data-aos="zoom-in" data-aos-delay="250" class="bg-custom-dark-card rounded-lg p-4 flex flex-col items-center justify-center gap-2 transform hover:-translate-y-1 transition-transform duration-300 shadow-md"><i class="devicon-vscode-plain colored text-5xl"></i><span class="font-semibold text-sm">VS Code</span></div>
+                    <div data-aos="zoom-in" data-aos-delay="300" class="bg-custom-dark-card rounded-lg p-4 flex flex-col items-center justify-center gap-2 transform hover:-translate-y-1 transition-transform duration-300 shadow-md"><i class="fas fa-video text-5xl" style="color: #00897b;"></i><span class="font-semibold text-sm">Google Meet</span></div>
+                    <div data-aos="zoom-in" data-aos-delay="350" class="bg-custom-dark-card rounded-lg p-4 flex flex-col items-center justify-center gap-2 transform hover:-translate-y-1 transition-transform duration-300 shadow-md"><i class="devicon-photoshop-plain colored text-5xl"></i><span class="font-semibold text-sm">Photoshop</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Works Section -->
+        <section id="work" class="py-24">
+            <div data-aos="fade-up">
+                <h2 class="text-4xl font-bold dark:text-white text-center mb-2">My Works</h2>
+                <p class="text-center mb-12 text-custom-yellow font-medium">Check out my projects.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div data-aos="fade-up" data-aos-delay="100" class="bg-custom-dark-card rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 shadow-lg flex flex-col">
+                    <img src="img/veritas (2).png" alt="Stock Inventory App" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold dark:text-white mb-2">Stock Inventory App</h3>
+                        <p class="text-slate-500 dark:text-slate-400 mb-4 flex-grow">A comprehensive stock management system designed to track inventory, manage sales, and generate real-time profit reports.</p>
+                        <div class="mb-4">
+                            <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2 mb-2">Web App</span>
+                            <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2 mb-2">PHP</span>
+                            <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2 mb-2">JavaScript</span>
+                        </div>
+                        <div class="flex gap-4 mt-auto">
+                            <a href="#" class="font-semibold text-custom-yellow hover:underline">Live Demo</a>
+                            <a href="#" class="font-semibold text-custom-yellow hover:underline">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Project Card 2 -->
+                <div data-aos="fade-up" data-aos-delay="200" class="bg-custom-dark-card rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 shadow-lg flex flex-col">
+                    <img src="img/chubi exchange.png" alt="Crypto Trading ChatBot App" class="w-full h-48 object-cover">
+                     <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold dark:text-white mb-2">Crypto Trading ChatBot App</h3>
+                        <p class="text-slate-500 dark:text-slate-400 mb-4 flex-grow">An automated chatbot application that facilitates crypto trading through a conversational and intuitive user interface.</p>
+                        <div class="mb-4">
+                            <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2 mb-2">Mobile App</span>
+                            <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2 mb-2">React Native</span>
+                            <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2 mb-2">TypeScript</span>
+                            <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2 mb-2">Laravel</span>
+                        </div>
+                        <div class="flex gap-4 mt-auto">
+                            <a href="#" class="font-semibold text-custom-yellow hover:underline">App Store</a>
+                            <a href="#" class="font-semibold text-custom-yellow hover:underline">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 3 -->
+                <div data-aos="fade-up" data-aos-delay="300" class="bg-custom-dark-card rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 shadow-lg flex flex-col">
+                     <img src="img/portt.png" alt="Portfolio Website" class="w-full h-48 object-cover">
+                     <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold dark:text-white mb-2">Portfolio Website</h3>
+                        <p class="text-slate-500 dark:text-slate-400 mb-4 flex-grow">A sleek, modern, and fully responsive portfolio template for developers and designers, just like this one.</p>
+                        <div class="mb-4">
+                           <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2 mb-2">Web App</span>
+                            <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2 mb-2">HTML</span>
+                            <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2 mb-2">Tailwind CSS</span>
+                            <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2 mb-2">JavaScript</span>
+                        </div>
+                        <div class="flex gap-4 mt-auto">
+                            <a href="#" class="font-semibold text-custom-yellow hover:underline">Live Demo</a>
+                            <a href="#" class="font-semibold text-custom-yellow hover:underline">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Project Card 4 -->
+                <div data-aos="fade-up" data-aos-delay="100" class="bg-custom-dark-card rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 shadow-lg flex flex-col">
+                    <img src="img/taskio mockup.png" alt="Task Management App" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold dark:text-white mb-2">Task Management App</h3>
+                        <p class="text-slate-500 dark:text-slate-400 mb-4 flex-grow">A productivity app to help users organize their tasks, set deadlines, and track their daily progress effectively.</p>
+                        <div class="mb-4">
+                            <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2 mb-2">Mobile App</span>
+                            <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2 mb-2">React Native</span>
+                            <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2 mb-2">TypeScript</span>
+                            <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2 mb-2">PHP</span>
+                        </div>
+                        <div class="flex gap-4 mt-auto">
+                            <a href="#" class="font-semibold text-custom-yellow hover:underline">App Store</a>
+                            <a href="#" class="font-semibold text-custom-yellow hover:underline">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 5 -->
+                <div data-aos="fade-up" data-aos-delay="200" class="bg-custom-dark-card rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 shadow-lg flex flex-col">
+                    <img src="img/foodie mockup.png" alt="Restaurant Web App" class="w-full h-48 object-cover">
+                     <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold dark:text-white mb-2">Restaurant Web App</h3>
+                        <p class="text-slate-500 dark:text-slate-400 mb-4 flex-grow">A web application for a modern restaurant, featuring online ordering, menu management, and reservation capabilities.</p>
+                        <div class="mb-4">
+                            <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2 mb-2">Web App</span>
+                            <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2 mb-2">HTML</span>
+                            <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2 mb-2">JavaScript</span>
+                            <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2 mb-2">PHP</span>
+                        </div>
+                        <div class="flex gap-4 mt-auto">
+                            <a href="#" class="font-semibold text-custom-yellow hover:underline">Live Demo</a>
+                            <a href="#" class="font-semibold text-custom-yellow hover:underline">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Project Card 6 -->
+                <div data-aos="fade-up" data-aos-delay="300" class="bg-custom-dark-card rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 shadow-lg flex flex-col">
+                     <img src="img/atompay.png" alt="VTU Fintech App" class="w-full h-48 object-cover">
+                     <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold dark:text-white mb-2">VTU Fintech App</h3>
+                        <p class="text-slate-500 dark:text-slate-400 mb-4 flex-grow">A fintech application for virtual top-up (VTU) services, allowing users to purchase airtime, data, and pay bills.</p>
+                        <div class="mb-4">
+                           <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2 mb-2">Web App</span>
+                            <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2 mb-2">Laravel</span>
+                             <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2 mb-2">MySQL</span>
+                        </div>
+                        <div class="flex gap-4 mt-auto">
+                            <a href="#" class="font-semibold text-custom-yellow hover:underline">Live Demo</a>
+                            <a href="#" class="font-semibold text-custom-yellow hover:underline">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <button id="toggle-projects-btn" class="bg-custom-yellow text-gray-900 font-bold px-8 py-3 rounded-full hover:bg-yellow-500 transition-all duration-300">See More</button>
+            </div>
+        </section>
+        
+        <!-- Experience Section -->
+        <section id="experience" class="py-24">
+             <h2 data-aos="fade-up" class="text-4xl font-bold dark:text-white text-center mb-2">My Experience</h2>
+            <p data-aos="fade-up" data-aos-delay="100" class="text-center mb-16 text-custom-yellow font-medium">My career and education journey.</p>
+
+            <!-- Work Experience -->
+            <div class="max-w-4xl mx-auto mb-16">
+                 <h3 data-aos="fade-up" class="text-3xl font-bold dark:text-white text-center mb-12">Work Experience</h3>
+                 <div class="relative">
+                     <!-- Vertical Line -->
+                    <div class="absolute left-4 top-0 h-full w-0.5 bg-gray-200 dark:bg-slate-700"></div>
+                     <!-- Item 1 -->
+                    <div data-aos="fade-left" class="mb-12 relative pl-12">
+                        <div class="absolute left-[-11px] top-1 w-8 h-8 rounded-full bg-custom-dark-card border-4 border-gray-200 dark:border-slate-700 flex items-center justify-center">
+                            <i class="fas fa-briefcase text-custom-yellow text-sm"></i>
+                        </div>
+                        <span class="text-sm font-semibold text-slate-500 dark:text-slate-400">February 2025 - Present</span>
+                        <h4 class="text-xl font-bold dark:text-white mt-1">Full Stack Web Developer & Instructor - <span class="font-normal text-slate-400">Webcapz Technologies</span></h4>
+                        <ul class="mt-2 list-disc list-inside text-slate-500 dark:text-slate-400 space-y-1">
+                            <li>Developed responsive, user-friendly websites and web applications tailored to client needs.</li>
+                            <li>Trained 50+ students in frontend & backend development (HTML, CSS, JavaScript, ReactJS, PHP, MySQL).</li>
+                            <li>Taught GitHub best practices, version control, and team collaboration.</li>
+                            <li>Conducted code reviews, pair programming, and project-based learning.</li>
+                            <li>Collaborated with UI/UX designers to enhance user experience.</li>
+                            <li>Integrated third-party APIs and payment gateways seamlessly.</li>
+                        </ul>
+                    </div>
+                     <!-- Item 2 -->
+                    <div data-aos="fade-left" data-aos-delay="100" class="mb-12 relative pl-12">
+                         <div class="absolute left-[-11px] top-1 w-8 h-8 rounded-full bg-custom-dark-card border-4 border-gray-200 dark:border-slate-700 flex items-center justify-center">
+                            <i class="fas fa-briefcase text-custom-yellow text-sm"></i>
+                        </div>
+                        <span class="text-sm font-semibold text-slate-500 dark:text-slate-400">June 2023 - January 2024</span>
+                        <h4 class="text-xl font-bold dark:text-white mt-1">Full Stack Developer - <span class="font-normal text-slate-400">Veritas Automobile Ltd.</span></h4>
+                        <ul class="mt-2 list-disc list-inside text-slate-500 dark:text-slate-400 space-y-1">
+                            <li>Developed a full-stack inventory management system to track goods, sales, and profits.</li>
+                            <li>Built both frontend and backend, ensuring seamless operations and real-time data management.</li>
+                            <li>Designed a sleek, intuitive UI focused on delivering a smooth user experience.</li>
+                            <li>The project prioritized scalability and performance.</li>
+                        </ul>
+                    </div>
+                    <!-- Item 3 -->
+                    <div data-aos="fade-left" data-aos-delay="200" class="relative pl-12">
+                        <div class="absolute left-[-11px] top-1 w-8 h-8 rounded-full bg-custom-dark-card border-4 border-gray-200 dark:border-slate-700 flex items-center justify-center">
+                            <i class="fas fa-briefcase text-custom-yellow text-sm"></i>
+                        </div>
+                        <h4 class="text-xl font-bold dark:text-white mt-1">Frontend Developer - <span class="font-normal text-slate-400">Alouxe Engineering Ltd.</span></h4>
+                        <ul class="mt-2 list-disc list-inside text-slate-500 dark:text-slate-400 space-y-1">
+                            <li>Designed and developed a fully responsive corporate website for Alouxe Engineering.</li>
+                            <li>Built clean, high-performance interfaces using HTML, CSS, JavaScript, and ReactJS.</li>
+                            <li>Transformed Figma/Adobe XD designs into pixel-perfect, brand-consistent UI.</li>
+                            <li>Ensured cross-browser compatibility, fast load times, and accessibility.</li>
+                            <li>Provided clear documentation and handover support for scalability.</li>
+                        </ul>
+                    </div>
+                 </div>
+            </div>
+
+            <!-- Education -->
+            <div class="max-w-4xl mx-auto">
+                <h3 data-aos="fade-up" class="text-3xl font-bold dark:text-white text-center mb-12">Education & Training</h3>
+                <div class="relative">
+                    <!-- Vertical Line -->
+                    <div class="absolute left-4 top-0 h-full w-0.5 bg-gray-200 dark:bg-slate-700"></div>
+                    <!-- Item 1 -->
+                    <div data-aos="fade-left" class="mb-12 relative pl-12">
+                        <div class="absolute left-[-11px] top-1 w-8 h-8 rounded-full bg-custom-dark-card border-4 border-gray-200 dark:border-slate-700 flex items-center justify-center">
+                            <i class="fas fa-certificate text-custom-yellow text-sm"></i>
+                        </div>
+                        <span class="text-sm font-semibold text-slate-500 dark:text-slate-400">Training</span>
+                        <h4 class="text-xl font-bold dark:text-white mt-1">Mobile App Development</h4>
+                        <p class="mt-1 text-slate-500 dark:text-slate-400">Webcapz Technologies, Port Harcourt</p>
+                    </div>
+                     <!-- Item 2 -->
+                    <div data-aos="fade-left" data-aos-delay="100" class="mb-12 relative pl-12">
+                        <div class="absolute left-[-11px] top-1 w-8 h-8 rounded-full bg-custom-dark-card border-4 border-gray-200 dark:border-slate-700 flex items-center justify-center">
+                            <i class="fas fa-certificate text-custom-yellow text-sm"></i>
+                        </div>
+                        <span class="text-sm font-semibold text-slate-500 dark:text-slate-400">Training</span>
+                        <h4 class="text-xl font-bold dark:text-white mt-1">Full Stack Web Development</h4>
+                        <p class="mt-1 text-slate-500 dark:text-slate-400">Integral Computer Institute, Port Harcourt</p>
+                    </div>
+                    <!-- Item 3 -->
+                    <div data-aos="fade-left" data-aos-delay="200" class="mb-12 relative pl-12">
+                        <div class="absolute left-[-11px] top-1 w-8 h-8 rounded-full bg-custom-dark-card border-4 border-gray-200 dark:border-slate-700 flex items-center justify-center">
+                            <i class="fas fa-graduation-cap text-custom-yellow text-sm"></i>
+                        </div>
+                        <span class="text-sm font-semibold text-slate-500 dark:text-slate-400">Degree</span>
+                        <h4 class="text-xl font-bold dark:text-white mt-1">B.Sc. in Industrial Chemistry</h4>
+                        <p class="mt-1 text-slate-500 dark:text-slate-400">University of Port Harcourt</p>
+                    </div>
+                    <!-- Item 4 -->
+                    <div data-aos="fade-left" data-aos-delay="300" class="relative pl-12">
+                        <div class="absolute left-[-11px] top-1 w-8 h-8 rounded-full bg-custom-dark-card border-4 border-gray-200 dark:border-slate-700 flex items-center justify-center">
+                            <i class="fas fa-graduation-cap text-custom-yellow text-sm"></i>
+                        </div>
+                        <span class="text-sm font-semibold text-slate-500 dark:text-slate-400">2008 - 2013</span>
+                        <h4 class="text-xl font-bold dark:text-white mt-1">Senior Secondary School Certificate</h4>
+                        <p class="mt-1 text-slate-500 dark:text-slate-400">International Secondary School, ABSU Uturu</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Testimonial Section -->
+        <section id="testimonial" class="py-24">
+            <div data-aos="fade-up">
+                <h2 class="text-4xl font-bold dark:text-white text-center mb-2">Testimonials</h2>
+                <p class="text-center mb-12 text-custom-yellow font-medium">What My Clients Say</p>
+            </div>
+            <div class="relative max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                <div id="testimonial-slider" class="relative overflow-hidden">
+                    <!-- Testimonial Card 1 -->
+                    <div class="testimonial-item bg-custom-dark-card rounded-lg p-8 shadow-lg min-w-full transition-opacity duration-500 ease-in-out">
+                        <div class="flex items-center mb-4">
+                            <img src="https://placehold.co/60x60/1a1a1a/ffffff?text=JD" alt="John Doe" class="w-16 h-16 rounded-full mr-4 object-cover">
+                            <div>
+                                <h4 class="text-xl font-bold dark:text-white">John Doe</h4>
+                                <p class="text-slate-500 dark:text-slate-400">CEO, Tech Solutions</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-500 dark:text-slate-400 mb-4">"Augustine is an exceptional developer. He delivered a high-quality product on time and was a pleasure to work with. His attention to detail and problem-solving skills are top-notch. Highly recommended!"</p>
+                        <div class="text-custom-yellow">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                     <!-- Testimonial Card 2 -->
+                    <div class="testimonial-item bg-custom-dark-card rounded-lg p-8 shadow-lg min-w-full transition-opacity duration-500 ease-in-out hidden">
+                        <div class="flex items-center mb-4">
+                            <img src="https://placehold.co/60x60/1a1a1a/ffffff?text=JS" alt="Jane Smith" class="w-16 h-16 rounded-full mr-4 object-cover">
+                            <div>
+                                <h4 class="text-xl font-bold dark:text-white">Jane Smith</h4>
+                                <p class="text-slate-500 dark:text-slate-400">Marketing Manager, Creative Co.</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-500 dark:text-slate-400 mb-4">"Working with Augustine was a fantastic experience. He transformed our vision into a beautiful, functional website that has significantly boosted our online presence. His communication was excellent throughout the project."</p>
+                        <div class="text-custom-yellow">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                     <!-- Testimonial Card 3 -->
+                    <div class="testimonial-item bg-custom-dark-card rounded-lg p-8 shadow-lg min-w-full transition-opacity duration-500 ease-in-out hidden">
+                        <div class="flex items-center mb-4">
+                            <img src="https://placehold.co/60x60/1a1a1a/ffffff?text=MB" alt="Mike Brown" class="w-16 h-16 rounded-full mr-4 object-cover">
+                            <div>
+                                <h4 class="text-xl font-bold dark:text-white">Mike Brown</h4>
+                                <p class="text-slate-500 dark:text-slate-400">Startup Founder</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-500 dark:text-slate-400 mb-4">"His ability to quickly understand concepts and turn them into reality is impressive. The final product exceeded our expectations in every way. We'll definitely be working with him again on future projects."</p>
+                        <div class="text-custom-yellow">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slider Controls -->
+                 <div class="flex justify-center items-center mt-8 space-x-3" id="testimonial-dots">
+                    <!-- Dots will be generated by JS -->
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Blog Section -->
+        <section id="blog" class="py-24">
+            <div data-aos="fade-up">
+                <h2 class="text-4xl font-bold dark:text-white text-center mb-2">My Blog</h2>
+                <p class="text-center mb-12 text-custom-yellow font-medium">Recent Articles</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog Post 1 -->
+                <div data-aos="fade-up" data-aos-delay="100" class="bg-custom-dark-card rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 shadow-lg flex flex-col">
+                    <a href="5-reasons-to-use-react-native.html" class="block">
+                        <img src="img/5-reasons-to-use-react-native.png" alt="5 Reasons to Use React Native" class="w-full h-48 object-cover">
+                    </a>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-sm text-slate-500 dark:text-slate-400 mb-2">September 4, 2025</span>
+                        <h3 class="text-xl font-bold dark:text-white mb-2 flex-grow">5 Reasons to Use React Native for Your Next Mobile App</h3>
+                        <a href="5-reasons-to-use-react-native.html" class="font-semibold text-custom-yellow hover:underline mt-auto">Read More &rarr;</a>
+                    </div>
+                </div>
+                <!-- Blog Post 2 -->
+                <div data-aos="fade-up" data-aos-delay="200" class="bg-custom-dark-card rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 shadow-lg flex flex-col">
+                    <a href="tailwind-css-vs-bootstrap.html" class="block">
+                        <img src="img/Tailwind CSS vs Bootstrap - A Deep Dive for Developers.png" alt="Tailwind CSS vs Bootstrap" class="w-full h-48 object-cover">
+                    </a>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-sm text-slate-500 dark:text-slate-400 mb-2">August 28, 2025</span>
+                        <h3 class="text-xl font-bold dark:text-white mb-2 flex-grow">A Deep Dive into Tailwind CSS vs. Bootstrap</h3>
+                        <a href="tailwind-css-vs-bootstrap.html" class="font-semibold text-custom-yellow hover:underline mt-auto">Read More &rarr;</a>
+                    </div>
+                </div>
+                <!-- Blog Post 3 -->
+                <div data-aos="fade-up" data-aos-delay="300" class="bg-custom-dark-card rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 shadow-lg flex flex-col">
+                    <a href="how-i-built-my-portfolio-guide.html" class="block">
+                        <img src="img/portt.png" alt="How I built my portfolio" class="w-full h-48 object-cover">
+                    </a>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-sm text-slate-500 dark:text-slate-400 mb-2">August 22, 2025</span>
+                        <h3 class="text-xl font-bold dark:text-white mb-2 flex-grow">How I Built My Portfolio: A Step-by-Step Guide</h3>
+                        <a href="how-i-built-my-portfolio-guide.html" class="font-semibold text-custom-yellow hover:underline mt-auto">Read More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-24">
+            <div data-aos="fade-up">
+                <h2 class="text-4xl font-bold dark:text-white text-center mb-2">FAQ</h2>
+                <p class="text-center mb-12 text-custom-yellow font-medium">Frequently Asked Questions</p>
+            </div>
+            <div class="max-w-3xl mx-auto space-y-4">
+                <!-- FAQ Item 1 -->
+                <div data-aos="fade-up" data-aos-delay="100" class="border border-gray-200 dark:border-slate-700 rounded-lg">
+                    <button class="faq-toggle w-full flex items-center text-left p-6">
+                        <i class="fas fa-play text-custom-yellow transition-transform duration-300 mr-4"></i>
+                        <h3 class="text-lg font-semibold dark:text-white">What is your development process?</h3>
+                    </button>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                        <p class="px-6 pb-6 pl-16 text-slate-500 dark:text-slate-400">My process is collaborative and structured. We start with a discovery phase to understand your goals, followed by UI/UX design, development, testing, and deployment. I provide regular updates throughout the project to ensure we're aligned.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div data-aos="fade-up" data-aos-delay="200" class="border border-gray-200 dark:border-slate-700 rounded-lg">
+                    <button class="faq-toggle w-full flex items-center text-left p-6">
+                        <i class="fas fa-play text-custom-yellow transition-transform duration-300 mr-4"></i>
+                        <h3 class="text-lg font-semibold dark:text-white">How long does a typical project take?</h3>
+                    </button>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                        <p class="px-6 pb-6 pl-16 text-slate-500 dark:text-slate-400">Project timelines vary depending on the complexity and scope. A simple website might take 2-4 weeks, while a more complex web or mobile application could take 2-3 months or more. I provide a detailed timeline after our initial consultation.</p>
+                    </div>
+                </div>
+                 <!-- FAQ Item 3 -->
+                <div data-aos="fade-up" data-aos-delay="300" class="border border-gray-200 dark:border-slate-700 rounded-lg">
+                    <button class="faq-toggle w-full flex items-center text-left p-6">
+                        <i class="fas fa-play text-custom-yellow transition-transform duration-300 mr-4"></i>
+                        <h3 class="text-lg font-semibold dark:text-white">What technologies do you specialize in?</h3>
+                    </button>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                        <p class="px-6 pb-6 pl-16 text-slate-500 dark:text-slate-400">My primary expertise is building powerful backends with PHP/Laravel and dynamic frontends with React/Next.js. For mobile development, I use React Native. This versatile skill set allows me to choose the best tools for any project to ensure scalability and performance.</p>
+                    </div>
+                </div>
+                 <!-- FAQ Item 4 -->
+                <div data-aos="fade-up" data-aos-delay="400" class="border border-gray-200 dark:border-slate-700 rounded-lg">
+                    <button class="faq-toggle w-full flex items-center text-left p-6">
+                        <i class="fas fa-play text-custom-yellow transition-transform duration-300 mr-4"></i>
+                        <h3 class="text-lg font-semibold dark:text-white">How do you handle project pricing?</h3>
+                    </button>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                        <p class="px-6 pb-6 pl-16 text-slate-500 dark:text-slate-400">I offer both fixed-price and hourly rates, depending on the project scope and client preference. For larger projects, we'll agree on a fixed price based on a detailed proposal. For smaller tasks or ongoing work, an hourly rate might be more suitable.</p>
+                    </div>
+                </div>
+                 <!-- FAQ Item 5 -->
+                <div data-aos="fade-up" data-aos-delay="500" class="border border-gray-200 dark:border-slate-700 rounded-lg">
+                    <button class="faq-toggle w-full flex items-center text-left p-6">
+                        <i class="fas fa-play text-custom-yellow transition-transform duration-300 mr-4"></i>
+                        <h3 class="text-lg font-semibold dark:text-white">What kind of support do you offer after launch?</h3>
+                    </button>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                        <p class="px-6 pb-6 pl-16 text-slate-500 dark:text-slate-400">I offer a 30-day post-launch support period to fix any bugs or issues that may arise. I also offer ongoing maintenance packages for regular updates, security checks, and technical support to ensure your application runs smoothly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24">
+            <div data-aos="fade-up">
+                <h2 class="text-4xl font-bold dark:text-white text-center mb-2">Get In Touch</h2>
+                <p class="text-center mb-12 text-custom-yellow font-medium">I'm available for freelance work.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-10">
+                <form action="#" class="space-y-6" data-aos="fade-right">
+                    <input type="text" placeholder="Your Name" class="w-full form-input bg-gray-100 border border-gray-300 rounded-lg p-4 focus:outline-none focus:ring-2 focus:ring-custom-yellow">
+                    <input type="email" placeholder="Your Email" class="w-full form-input bg-gray-100 border border-gray-300 rounded-lg p-4 focus:outline-none focus:ring-2 focus:ring-custom-yellow">
+                    <textarea placeholder="Your Message" rows="5" class="w-full form-input bg-gray-100 border border-gray-300 rounded-lg p-4 focus:outline-none focus:ring-2 focus:ring-custom-yellow"></textarea>
+                    <button type="submit" class="gradient-button text-white font-bold px-8 py-3 rounded-full transition-all duration-300">Send Message</button>
+                </form>
+                <div class="bg-custom-dark-card rounded-lg h-full min-h-[400px] overflow-hidden" data-aos="fade-left">
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127223.1345997201!2d6.92059343993881!3d4.82138590685973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069ce1630e21411%3A0x8e83164139e4453e!2sPort%20Harcourt%2C%2C%20Rivers!5e0!3m2!1sen!2sng!4v1693751293788!5m2!1sen!2sng" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="dark-map"></iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-6 border-t border-gray-200 dark:border-slate-800">
+        <div class="container mx-auto px-6 text-center text-slate-500 dark:text-slate-400">
+            <p>&copy; 2024 Augustine. Designed with <span class="text-custom-yellow">&hearts;</span></p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="hidden fixed bottom-8 right-8 w-12 h-12 rounded-full gradient-button text-white text-xl z-50 flex items-center justify-center shadow-lg transform">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
+

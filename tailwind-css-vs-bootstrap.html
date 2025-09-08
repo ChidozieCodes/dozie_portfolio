@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Tailwind CSS vs. Bootstrap: A Deep Dive for Developers | Doziecodes</title>
+    <meta name="description" content="Choosing a CSS framework? This detailed comparison of Tailwind CSS (utility-first) and Bootstrap (component-based) covers customization, performance, and developer experience to help you decide.">
+    <meta name="keywords" content="Tailwind CSS, Bootstrap, CSS framework, utility-first CSS, component-based CSS, web development, frontend developer">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://doziecodes.netlify.app/tailwind-vs-bootstrap.html">
+    <meta property="og:title" content="Tailwind CSS vs. Bootstrap: A Deep Dive for Developers | Doziecodes">
+    <meta property="og:description" content="Choosing a CSS framework? This detailed comparison of Tailwind CSS and Bootstrap covers customization, performance, and developer experience to help you decide.">
+    <meta property="og:image" content="https://doziecodes.netlify.app/img/tailwind-vs-bootstrap-banner.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://doziecodes.netlify.app/tailwind-vs-bootstrap.html">
+    <meta property="twitter:title" content="Tailwind CSS vs. Bootstrap: A Deep Dive for Developers | Doziecodes">
+    <meta property="twitter:description" content="Choosing a CSS framework? This detailed comparison of Tailwind CSS and Bootstrap covers customization, performance, and developer experience to help you decide.">
+    <meta property="twitter:image" content="https://doziecodes.netlify.app/img/tailwind-vs-bootstrap-banner.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "A Deep Dive into Tailwind CSS vs. Bootstrap",
+      "image": "https://doziecodes.netlify.app/img/tailwind-vs-bootstrap-banner.png",  
+      "author": {
+        "@type": "Person",
+        "name": "Augustine Chidozie"
+      },  
+      "publisher": {
+        "@type": "Organization",
+        "name": "Doziecodes"
+      },
+      "datePublished": "2025-08-28"
+    }
+    </script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fdfdfd;
+            color: #333;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #ffb400, #ff7e5f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        .prose {
+            color: #374151;
+        }
+        .prose h1, .prose h2, .prose h3 {
+            color: #111827;
+        }
+        .prose p, .prose ul, .prose blockquote, .prose h2, .prose h3 {
+            margin-bottom: 1.25em;
+        }
+        .prose h2, .prose h3 {
+            margin-top: 2em;
+        }
+        .prose a {
+            color: #f59e0b;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .prose a:hover {
+            text-decoration: underline;
+        }
+        .prose strong {
+            color: #111827;
+        }
+        .prose blockquote {
+            border-left-color: #ffb400;
+            color: #6b7280;
+        }
+        .prose code {
+            color: #ec4899;
+            background-color: #f3f4f6;
+            padding: 0.2em 0.4em;
+            border-radius: 0.25rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Simple Header -->
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-200">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-gray-900 group">
+                <span class="font-semibold group-hover:text-custom-yellow transition-colors duration-300">dozie</span><span class="gradient-text">codes.</span>
+            </a>
+            <a href="index.html#contact" class="bg-yellow-500 text-gray-900 font-bold px-6 py-2 rounded-full hover:bg-yellow-600 transition-colors duration-300">Contact Me</a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-16">
+        <article class="prose prose-lg max-w-4xl mx-auto">
+            
+            <span class="text-sm text-gray-500">August 28, 2025</span>
+            <h1>A Deep Dive into Tailwind CSS vs. Bootstrap</h1>
+            
+            <p class="lead">For years, Bootstrap has been the undisputed king of CSS frameworks, empowering developers to build responsive websites quickly. But a new challenger has emerged and taken the frontend world by storm: Tailwind CSS. They both aim to make styling easier, but their philosophies are fundamentally different. So, which one should you choose for your next project? Let's break it down.</p>
+
+            <img src="img/Tailwind CSS vs Bootstrap - A Deep Dive for Developers.png" alt="Tailwind CSS vs. Bootstrap logos" class="rounded-lg my-8">
+
+            <h2>Core Philosophy: Utility-First vs. Component-Based</h2>
+            <p>The biggest difference lies in their approach. <strong>Bootstrap is component-based.</strong> It gives you pre-styled components like <code>.card</code>, <code>.btn</code>, and <code>.modal</code>. This is great for getting a standard-looking site up and running very quickly. The trade-off is that your site can end up looking like many other Bootstrap sites, and customization often means overriding existing styles.</p>
+            <p><strong>Tailwind CSS is utility-first.</strong> It doesn’t provide pre-built components. Instead, it provides low-level utility classes like <code>flex</code>, <code>pt-4</code> (padding-top), and <code>text-center</code>. You use these "building blocks" to create completely custom designs directly in your HTML. This means no two Tailwind sites look the same unless you want them to.</p>
+
+            <h2>Customization and Control</h2>
+            <p>This is where Tailwind truly shines. With utility classes, you have complete control over every aspect of your design without writing a single line of custom CSS. You can tweak spacing, colors, and shadows with incredible precision. In Bootstrap, making a small change often requires you to find the right CSS class to override, which can become messy.</p>
+            <blockquote>
+                If you want to build a highly unique, bespoke design, Tailwind offers unparalleled flexibility. If you're happy with a more conventional design and want to move fast, Bootstrap's components are hard to beat.
+            </blockquote>
+
+            <h2>Learning Curve</h2>
+            <p>Bootstrap is generally considered easier for beginners. If you know HTML and a little CSS, you can understand its class names (<code>.btn-primary</code>, <code>.container</code>) almost instantly. You can build a functional layout in minutes.</p>
+            <p>Tailwind has a slightly steeper learning curve because you need to familiarize yourself with its utility classes. However, once you learn the syntax, development speed can become incredibly fast, as you rarely need to switch between your HTML and CSS files.</p>
+            
+            <h2>Performance and File Size</h2>
+            <p>Out of the box, a default Bootstrap CSS file includes styles for all its components, whether you use them or not. This can lead to a larger file size.</p>
+            <p>Tailwind, when used with its Just-in-Time (JIT) compiler, is incredibly efficient. It scans your HTML files and only generates the CSS for the utility classes you are actually using. This results in a much smaller, highly optimized final CSS file, which is better for performance.</p>
+
+            <h3>Conclusion: Which One Should You Use?</h3>
+            <ul>
+                <li><strong>Choose Bootstrap if:</strong> You need to build a standard website quickly, you're working on an admin dashboard where a conventional look is fine, or you're a beginner who wants pre-built components.</li>
+                <li><strong>Choose Tailwind CSS if:</strong> You are building a custom, unique design, you want full control over the look and feel, and you prioritize performance with a minimal CSS file.</li>
+            </ul>
+            <p>Both frameworks are excellent tools, but they solve different problems. As a developer who loves crafting unique user experiences, I've come to prefer the flexibility and control of Tailwind CSS. It empowers you to build anything you can imagine without fighting the framework.</p>
+
+            <p>Need help deciding on the right tech stack for your project? <a href="portfolio.html#contact">Let's get in touch!</a></p>
+
+        </article>
+    </main>
+
+    <!-- Simple Footer -->
+    <footer class="py-6 border-t border-gray-200">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p>&copy; 2024 Augustine. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
